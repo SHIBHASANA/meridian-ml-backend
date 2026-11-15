@@ -1,0 +1,39 @@
+{
+  "n_train_normal": 6000,
+  "n_test_normal": 2000,
+  "n_test_anomaly_per_kind": 500,
+  "unusual_threshold": {
+    "precision": 0.989,
+    "recall": 0.842,
+    "f1": 0.91,
+    "false_positive_rate": 0.009,
+    "confusion_matrix": {
+      "tn": 1982,
+      "fp": 18,
+      "fn": 316,
+      "tp": 1684
+    },
+    "roc_auc": 0.991
+  },
+  "significant_threshold": {
+    "precision": 0.998,
+    "recall": 0.595,
+    "f1": 0.745,
+    "false_positive_rate": 0.001,
+    "confusion_matrix": {
+      "tn": 1998,
+      "fp": 2,
+      "fn": 811,
+      "tp": 1189
+    },
+    "roc_auc": 0.991
+  },
+  "per_kind_recall_at_unusual": {
+    "cardiac_like": 0.998,
+    "fever_dehydration_like": 0.98,
+    "hypoxia_like": 0.984,
+    "sleep_stress_like": 0.406,
+    "subtle_drift_like": 0.464
+  },
+  "note": "Anomaly test cases are synthetic patterns written by the developer, so these figures are optimistic and say nothing about performance on real crews. subtle_drift_like is reported separately and excluded from the headline metrics."
+}
